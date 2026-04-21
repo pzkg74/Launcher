@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+build/
+**/bin/
+**/obj/
+**/publish/
+
+# NuGet
+**/packages/
+*.nupkg
+project.lock.json
+
+# Rider
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Python
+__pycache__/

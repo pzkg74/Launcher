@@ -1,0 +1,91 @@
+# Top-most EditorConfig file
+root = true
+
+# Default
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# C# source
+[*.cs]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# .NET naming conventions
+dotnet_naming_rule.private_fields_with_m_prefix.symbols = private_fields
+dotnet_naming_rule.private_fields_with_m_prefix.style = m_prefix_style
+dotnet_naming_rule.private_fields_with_m_prefix.severity = suggestion
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+dotnet_naming_style.m_prefix_style.required_prefix = m_
+dotnet_naming_style.m_prefix_style.capitalization = camel_case
+
+dotnet_naming_rule.static_fields_with_s_prefix.symbols = static_fields
+dotnet_naming_rule.static_fields_with_s_prefix.style = s_prefix_style
+dotnet_naming_rule.static_fields_with_s_prefix.severity = suggestion
+
+dotnet_naming_symbols.static_fields.applicable_kinds = field
+dotnet_naming_symbols.static_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.static_fields.required_modifiers = static
+
+dotnet_naming_style.s_prefix_style.required_prefix = s_
+dotnet_naming_style.s_prefix_style.capitalization = camel_case
+
+# Formatting
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_indent_case_contents = true
+csharp_space_after_cast = false
+csharp_preserve_single_line_blocks = true
+
+# Prefer modern C# features
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_prefer_braces = true:suggestion
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Using directives
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# HTML / CSS / JS
+[*.{html,css,js}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# JSON
+[*.json]
+indent_style = space
+indent_size = 2
+
+# XML project files
+[*.{csproj,sln,resx,manifest}]
+indent_style = space
+indent_size = 2
+
+# PowerShell
+[*.ps1]
+indent_style = space
+indent_size = 4
+
+# Python
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false
+
+# YAML
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2

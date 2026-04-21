@@ -1,0 +1,141 @@
+.host-section {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.host-section:last-of-type {
+    border-bottom: none;
+}
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.section-title.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+.section-title.clickable:hover {
+    color: var(--text-primary);
+}
+.section-chevron {
+    font-size: 11px;
+    color: var(--text-muted);
+    transition: transform var(--transition);
+}
+.section-collapsible {
+    animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.composed-preview {
+    margin-top: 14px;
+    padding: 12px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.composed-preview .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.composed-preview .field-label {
+    white-space: nowrap;
+    min-width: 120px;
+    font-size: 11px;
+}
+.text-input-readonly {
+    background: var(--bg-sidebar) !important;
+    color: var(--text-muted) !important;
+    cursor: default;
+    font-family: var(--font-mono);
+    font-size: 12px !important;
+}
+.ui-hidden {
+    display: none !important;
+}
+
+/* host sub-tabs (network, map, modifiers, anticheat, playlist) */
+.host-sub-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+.host-sub-tab {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+.host-sub-tab:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+.host-sub-tab.active {
+    background: var(--bg-input);
+    border-color: var(--border);
+    color: var(--accent);
+}
+.host-sub-content {
+    display: none;
+}
+.host-sub-content.active {
+    display: block;
+}
+
+/* instance server sub-tabs (map, modifiers, anticheat) */
+.srv-sub-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+}
+.srv-sub-tab {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 4px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+.srv-sub-tab:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+.srv-sub-tab.active {
+    background: var(--bg-input);
+    border-color: var(--border);
+    color: var(--accent);
+}
+.srv-sub-content {
+    display: none;
+}
+.srv-sub-content.active {
+    display: block;
+}

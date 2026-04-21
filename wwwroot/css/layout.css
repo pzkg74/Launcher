@@ -1,0 +1,4 @@
+.app {
+    display: flex;
+    height: calc(100vh - var(--titlebar-height));
+}
