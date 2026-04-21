@@ -10,10 +10,13 @@ Built with [Photino.NET](https://www.tryphotino.io/) (HTML/CSS/JS frontend, C# b
 - **Host** dedicated servers with full game mode and level selection
 - **Server Browser** with master server registration and heartbeats
 - **Playlist Editor** for custom level rotations
-- **Relay Support** for NAT traversal without port forwarding
-- **Mod Integration** via Frosty ModData directories
-- **Multi-instance** management - run multiple servers/clients from one launcher
+- **Relay Support** (EU relay toggle) for NAT traversal without port forwarding
+- **Moderator Panel** for managing players, kicks, and bans
+- **MOTD Editor** with rich text formatting and color gradients
+- **Anticheat Toggles** for server-side cheat detection modules
+- **Multi-instance** management, run multiple servers/clients from one launcher
 - **Side-channel** TCP protocol for remote instance monitoring
+- **Smart Pickers** for level, mode, map backgrounds, and character art
 
 ## Supported Games
 
@@ -44,25 +47,6 @@ dotnet publish CypressLauncher.csproj -c Release -f net8.0-windows -o build /p:L
 
 Output goes to `build/`. You'll also need `courgette.exe`, the `.patch` files, and the server DLLs in the same directory for a working release.
 
-## Project Structure
-
-```
-CypressLauncher/          # C# source (backend)
-  Program.cs              # Entry point, Photino window setup, resource embedding
-  MessageHandler.cs       # Core logic - all message handlers (join, host, browse, etc.)
-  GameInstance.cs         # Local process wrapper (stdin/stdout pipes)
-  ExternalInstance.cs     # TCP side-channel for remote instances
-  PEFile.cs              # PE header parsing for exe version detection
-  ImageHelper.cs         # SkiaSharp image resizing
-wwwroot/                  # Frontend
-  index.html             # Main UI template
-  css/                   # 17 modular CSS files
-  js/                    # 16 modular JS files
-assets/                  # Icons, backgrounds, fonts
-Docs/                    # End-user documentation (bundled in releases)
-tools/                   # Python CLI server, master server, relay
-```
-
 ## Credits
 
 <table>
@@ -77,4 +61,7 @@ tools/                   # Python CLI server, master server, relay
 ## License
 
 [GPL-3.0](LICENSE)
+
+## Terms of Service
+[Terms Of Service](TOS)
 
