@@ -128,7 +128,12 @@ function loadUserData(data) {
     if (data.additionalArgs !== undefined) document.getElementById('additionalArgs').value = data.additionalArgs;
     if (data.gameDir) setGameDir(data.gameDir);
     if (data.deviceIP !== undefined) document.getElementById('deviceIP').value = data.deviceIP;
-    if (data.hostConnectionMode !== undefined) document.getElementById('hostRelayMode').value = normalizeConnectionMode(data.hostConnectionMode);
+    if (data.hostConnectionMode !== undefined) {
+        document.getElementById('hostRelayMode').value = normalizeConnectionMode(data.hostConnectionMode);
+        var isRelay = normalizeConnectionMode(data.hostConnectionMode) === 'Relay';
+        var euToggle = document.getElementById('hostUseEuRelay');
+        if (euToggle) euToggle.checked = isRelay;
+    }
     if (data.hostRelayPreset !== undefined) document.getElementById('hostRelayPreset').value = data.hostRelayPreset;
     if (data.hostRelayAddress !== undefined) document.getElementById('hostRelayAddress').value = data.hostRelayAddress;
     if (data.hostRelayKey !== undefined) document.getElementById('hostRelayKey').value = data.hostRelayKey;
